@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>Popover & Tooltip</title>
+     
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" 
+	integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+	
+	<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	
+	<!-- We need to add tether cdn to get popovers & tooltips working.... PLACE IT JUST BELOW JQUERY TO GET IT WORKING -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
+	
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" 
+	integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" 
+	integrity="sha384-vZ2WRJMwsjRMW/8U7i6PWi6AlO1L79snBrmgiDpgIWJ82z8eA5lenwvxbMV1PAh7" crossorigin="anonymous"></script>
+	
+	<!-- We need to add tether cdn to get popovers working -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.3/js/tether.min.js"></script>
+	
+	<style type="text/css">
+	     
+	</style>
+  </head>
+  
+  <body> 
+  
+    <button type="button" class="btn btn-success btn-lg" id="clicktooltip" data-toggle="tooltip" data-placement="bottom" title="tooltip example">
+	I am a tooltip. Hover over me</button>
+	
+    <button type="button" class="btn btn-lg btn-info" data-toggle="popover" data-placement="bottom" 
+	title="Welcome to Gorakhpur" data-content="Gorakhpur is a city located along the banks of Rapti river in the north-eastern part of the Indian state of Uttar Pradesh, with a population of 673,446. It is located near the Nepal border, 273 kilometres east of the state capital Lucknow.">
+	Click here to see more about Gorakhpur</button>
+	
+	<script type="text/javascript">
+	   $('[data-toggle="popover"]').popover()
+	   $('[data-toggle="tooltip"]').tooltip()
+	   $("#clicktooltip").hover(function()
+	   { 
+	       alert("this is a tooltip");
+	   });
+	</script>
+  </body>
+</html>
